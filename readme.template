@@ -1,0 +1,29 @@
+{{.Name}}
+============
+
+{{if .IsGo}}
+Installation
+-----------
+
+```sh{{if .Make}}
+go get -d {{.GoURL}}
+make{{else}}
+go get {{.GoURL}}{{end}}
+```
+
+Or download a binary from [Latest release](https://{{.GoURL}}/releases/latest).
+
+{{end}}
+Usage
+-----------
+
+```sh
+$ {{.Name}}
+```
+
+License
+-------
+
+These codes are licensed under CC0.
+
+[![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png "CC0")](http://creativecommons.org/publicdomain/zero/1.0/deed.en)
