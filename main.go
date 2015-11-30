@@ -15,11 +15,10 @@ func main() {
 }
 
 func Main() error {
-	// f, err := os.Create("README.md")
-	// if err != nil {
-	// 	return err
-	// }
-	f := os.Stdout
+	f, err := os.Create("README.md")
+	if err != nil {
+		return err
+	}
 	defer f.Close()
 
 	b, err := Asset("readme.template")
